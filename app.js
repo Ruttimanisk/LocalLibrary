@@ -45,7 +45,7 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
+console.log('App still runs line 48')
 // Import the mongoose module
 const mongoose = require("mongoose");
 
@@ -66,7 +66,7 @@ const client = new MongoClient(process.env.MONGODB_URI, {
     deprecationErrors: true,
   }
 });
-
+console.log('App still runs line 69')
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -81,17 +81,7 @@ async function run() {
 }
 run().catch(console.dir);
 
-
-
-
-
-
-
-
-
-
-
-
+console.log('App still runsline 84')
 
 // Define the database URL to connect to.
 // const mongoDB = "mongodb://127.0.0.1/my_database";
@@ -101,4 +91,4 @@ main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(process.env.MONGODB_URI);
 }
-console.log('App still runs')
+console.log('App still runs end')
